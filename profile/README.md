@@ -22,6 +22,7 @@ Extracted from `go-news-reader/reader`; shared by any fetcher that must look lik
 | Module | Kind | What it is | API |
 |---|---|---|:--:|
 | [`browserhttp`](https://github.com/go-browserhttp/browserhttp) | client | Pure-Go `http.Client` presenting a Chrome TLS fingerprint via uTLS. CGO=0. | [ref](https://pkg.go.dev/github.com/go-browserhttp/browserhttp) |
+| [`gitcorsproxy`](https://github.com/go-browserhttp/gitcorsproxy) | proxy | A CORS reverse proxy for git smart-HTTP, so a Go/wasm git client in a browser can reach remotes that speak the protocol correctly and send no `Access-Control-Allow-Origin` — GitHub, a bare Forgejo. It **stores nothing**: the browser holds the user's token and sends it per request, the proxy relays it and forgets it. Standard library only, CGO=0, SSRF-guarded. | [ref](https://pkg.go.dev/github.com/go-browserhttp/gitcorsproxy) |
 
 > This list reflects the repos that actually exist in the org.
 
