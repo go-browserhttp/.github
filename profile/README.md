@@ -2,7 +2,7 @@
 
 <h1 align="center">go-browserhttp</h1>
 <p align="center">A pure-Go http.Client with a Chrome TLS fingerprint (uTLS) — bypass anti-bot 403s, no host web view.</p>
-<p align="center">[![docs](https://img.shields.io/badge/docs-mkdocs--material-0A6E96?style=flat-square&logo=materialformkdocs&logoColor=white)](https://go-browserhttp.github.io/docs/) ![repos](https://img.shields.io/badge/repos-1-0079A8?style=flat-square) ![Go](https://img.shields.io/badge/Go-1.26-00ADD8?style=flat-square&logo=go&logoColor=white) ![license](https://img.shields.io/badge/license-BSD--3--Clause-0A6E96?style=flat-square)</p>
+<p align="center">[![docs](https://img.shields.io/badge/docs-mkdocs--material-0A6E96?style=flat-square&logo=materialformkdocs&logoColor=white)](https://go-browserhttp.github.io/docs/) ![repos](https://img.shields.io/badge/repos-3-0079A8?style=flat-square) ![Go](https://img.shields.io/badge/Go-1.26-00ADD8?style=flat-square&logo=go&logoColor=white) ![license](https://img.shields.io/badge/license-BSD--3--Clause-0A6E96?style=flat-square)</p>
 
 ---
 
@@ -17,12 +17,13 @@ resp, err := c.Get("https://www.reddit.com/r/golang/hot.json")
 
 Extracted from `go-news-reader/reader`; shared by any fetcher that must look like a browser.
 
-## Repositories (1)
+## Repositories (3)
 
 | Module | Kind | What it is | API |
 |---|---|---|:--:|
 | [`browserhttp`](https://github.com/go-browserhttp/browserhttp) | client | Pure-Go `http.Client` presenting a Chrome TLS fingerprint via uTLS. CGO=0. | [ref](https://pkg.go.dev/github.com/go-browserhttp/browserhttp) |
 | [`gitcorsproxy`](https://github.com/go-browserhttp/gitcorsproxy) | proxy | A CORS reverse proxy for git smart-HTTP, so a Go/wasm git client in a browser can reach remotes that speak the protocol correctly and send no `Access-Control-Allow-Origin` — GitHub, a bare Forgejo. It **stores nothing**: the browser holds the user's token and sends it per request, the proxy relays it and forgets it. Standard library only, CGO=0, SSRF-guarded. | [ref](https://pkg.go.dev/github.com/go-browserhttp/gitcorsproxy) |
+| [`browsergit`](https://github.com/go-browserhttp/browsergit) | library | The git layer shared by the go-tex, go-slides and notebook playgrounds: load a project from GitHub, GitLab or Gitea/Forgejo and propose changes back as a new branch plus a pull request. Pure Go, runs in the browser (js/wasm). The token is never printed, serialised, redirected or echoed. | [ref](https://pkg.go.dev/github.com/go-browserhttp/browsergit) |
 
 > This list reflects the repos that actually exist in the org.
 
